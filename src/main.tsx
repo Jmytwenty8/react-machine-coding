@@ -4,10 +4,11 @@ import "./index.css";
 // import App from './App.tsx'
 // // import FileExplorer from './file-explorer.tsx'
 // import ProductsList from "./product-list/products-list.tsx";
-import PasswordGenerator from "./password-generator/password-generator.tsx";
+// import PasswordGenerator from "./password-generator/password-generator.tsx";
+import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <PasswordGenerator />
+    <App />
   </StrictMode>
 );
