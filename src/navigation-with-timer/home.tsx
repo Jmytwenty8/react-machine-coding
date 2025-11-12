@@ -10,9 +10,6 @@ const Home = () => {
     }
 
     useEffect(() => {
-        if (localStorage.getItem("timer")) {
-            return;
-        }
         const interval = setInterval(() => {
             setTimer(prev => {
                 const next = prev + 1;
@@ -29,10 +26,13 @@ const Home = () => {
 
     useEffect(() => {
         window.addEventListener("storage", timerChange);
+
         return () => {
             window.removeEventListener("storage", timerChange);
+
         }
     }, []);
+
 
 
     return (
