@@ -8,6 +8,7 @@ const Home = () => {
             setTimer(parseInt(e.newValue ?? "0") || 0);
         }
     }
+
     useEffect(() => {
         if (localStorage.getItem("timer")) {
             return;
@@ -19,9 +20,8 @@ const Home = () => {
                 return next;
             });
         }, 1000);
-        window.addEventListener("storage", timerChange);
+
         return () => {
-            window.removeEventListener("storage", timerChange);
             clearInterval(interval)
         };
 
